@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AR.js Multiple Markers Example</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="sourceType: webcam;">
+        
+        <!-- First Marker Pattern -->
+        <a-marker type="pattern" url="kompang.patt">
+            <a-text value="Kompang" position="0 0.5 0" rotation="0 0 0" scale="1 1 1" color="red"></a-text>
+        </a-marker>
+
+        <!-- Second Marker Pattern -->
+        <a-marker type="pattern" url="gendang.patt">
+            <a-text value="Gendang" position="0 0.5 0" rotation="0 0 0" scale="1 1 1" color="blue"></a-text>
+        </a-marker>
+
+        <!-- Third Marker Pattern -->
+        <a-marker type="pattern" url="gong.patt">
+            <a-text value="Gong" position="0 0.5 0" rotation="0 0 0" scale="1 1 1" color="green"></a-text>
+        </a-marker>
+
+        <!-- Camera Entity -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
